@@ -1,6 +1,7 @@
 # Git
 
-Configures global Git settings for your Windows environment. This module sets your Git identity and preferences so every machine is ready to commit.
+Configures global Git settings for your Windows environment. This module sets your Git identity and
+preferences so every machine is ready to commit.
 
 **YAML Key:** `git`
 
@@ -18,8 +19,8 @@ To configure Git using WinHome, add the `git` key to your `config.yaml`:
 
 ```yaml
 git:
-  userName: "Your Name"
-  userEmail: "your.email@example.com"
+  userName: 'Your Name'
+  userEmail: 'your.email@example.com'
   settings:
     init.defaultBranch: main
     pull.rebase: true
@@ -31,9 +32,9 @@ git:
 
 ```yaml
 git:
-  userName: "Your Name"
-  userEmail: "your.email@example.com"
-  signingKey: "ABC12345"
+  userName: 'Your Name'
+  userEmail: 'your.email@example.com'
+  signingKey: 'ABC12345'
   commitGpgSign: true
 ```
 
@@ -41,8 +42,8 @@ git:
 
 ```yaml
 git:
-  userName: "Your Name"
-  userEmail: "your.email@example.com"
+  userName: 'Your Name'
+  userEmail: 'your.email@example.com'
   settings:
     init.defaultBranch: main
     pull.rebase: true
@@ -56,8 +57,8 @@ git:
 
 ```yaml
 git:
-  userName: "John Doe"
-  userEmail: "john@example.com"
+  userName: 'John Doe'
+  userEmail: 'john@example.com'
   settings:
     init.defaultBranch: main
     pull.rebase: true
@@ -68,8 +69,8 @@ git:
 
 ```yaml
 git:
-  userName: "John Work"
-  userEmail: "john@company.com"
+  userName: 'John Work'
+  userEmail: 'john@company.com'
   settings:
     core.autocrlf: true
     credential.helper: manager
@@ -80,9 +81,9 @@ git:
 
 ```yaml
 git:
-  userName: "John Doe"
-  userEmail: "john@example.com"
-  signingKey: "ABC12345"
+  userName: 'John Doe'
+  userEmail: 'john@example.com'
+  signingKey: 'ABC12345'
   commitGpgSign: true
   settings:
     init.defaultBranch: main
@@ -93,8 +94,8 @@ git:
 
 ```yaml
 git:
-  userName: "John Doe"
-  userEmail: "john@example.com"
+  userName: 'John Doe'
+  userEmail: 'john@example.com'
   settings:
     init.defaultBranch: main
 ```

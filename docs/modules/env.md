@@ -1,7 +1,6 @@
 # Environment Variables
 
-Manages user-level environment variables 
-for your Windows environment.
+Manages user-level environment variables for your Windows environment.
 
 **YAML Key:** `envVars`
 
@@ -9,8 +8,8 @@ for your Windows environment.
 
 - `variable` : The name of the environment variable.
 - `value` : The value to set.
-- `action` : (Optional) `set` (default) or `append`. 
-  `append` adds the value to a path-like variable.
+- `action` : (Optional) `set` (default) or `append`. `append` adds the value to a path-like
+  variable.
 
 ---
 
@@ -31,11 +30,9 @@ envVars:
 
 ### Profile-Specific Variables
 
-Profile-specific environment variables can be 
-declared under `profiles.<name>.envVars`. When 
-that profile is selected with `--profile`, `set` 
-entries replace matching top-level variables, 
-while `append` entries add profile-only path segments.
+Profile-specific environment variables can be declared under `profiles.<name>.envVars`. When that
+profile is selected with `--profile`, `set` entries replace matching top-level variables, while
+`append` entries add profile-only path segments.
 
 ```yaml
 envVars:
@@ -84,7 +81,7 @@ envVars:
     value: "C:\\Python311\\Scripts"
     action: append
   - variable: PIP_DEFAULT_TIMEOUT
-    value: "100"
+    value: '100'
     action: set
 ```
 
@@ -103,7 +100,7 @@ profiles:
         value: code
         action: set
       - variable: PROXY_URL
-        value: "http://proxy.company.com"
+        value: 'http://proxy.company.com'
         action: set
       - variable: Path
         value: "%USERPROFILE%\\work\\bin"
@@ -124,16 +121,19 @@ envVars:
 ## Troubleshooting
 
 **Issue: Variable not found after setting**
+
 - Restart terminal after setting variables
 - Log out and log back in for system variables
 - Run `echo %MY_VAR%` in terminal to verify
 
 **Issue: Path variable not updating**
+
 - Use `action: append` to add to PATH
 - Use `action: set` to replace PATH value
 - Restart terminal to see PATH changes
 
 **Issue: Profile variables not applying**
+
 - Make sure to use `--profile` flag
 - Check profile name matches config
 - Verify profile section indentation

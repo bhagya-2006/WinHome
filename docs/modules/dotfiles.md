@@ -1,16 +1,14 @@
 # Dotfiles
 
-Creates symbolic links for your dotfiles 
-to manage configuration files across your 
-Windows development environment.
+Creates symbolic links for your dotfiles to manage configuration files across your Windows
+development environment.
 
 **YAML Key:** `dotfiles`
 
 **Properties:**
 
 - `src` : The source file path.
-- `target` : The target link path. 
-  Environment variables and `~` are supported.
+- `target` : The target link path. Environment variables and `~` are supported.
 
 ---
 
@@ -93,16 +91,19 @@ dotfiles:
 ## Troubleshooting
 
 **Issue: Symbolic link not created**
+
 - Make sure WinHome is run as Administrator
 - Check if source file exists
 - Verify source path is correct
 
 **Issue: Target path not found**
+
 - Check environment variables are correct
 - Make sure target directory exists
 - Use full path if `~` is not working
 
 **Issue: Link already exists**
+
 - Delete existing file at target path
 - Re-run WinHome to create new link
 - Check if another program created same file

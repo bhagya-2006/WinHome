@@ -1,18 +1,15 @@
 # Registry Tweaks
 
-Applies Windows Registry tweaks to 
-configure system settings and preferences.
+Applies Windows Registry tweaks to configure system settings and preferences.
 
 **YAML Key:** `registry`
 
 **Properties:**
 
-- `path` : The registry key path 
-  (e.g., `HKCU\\Software\\...`).
+- `path` : The registry key path (e.g., `HKCU\\Software\\...`).
 - `name` : The value name.
 - `value` : The value to set.
-- `type` : `string` (default), `dword`, 
-  `qword`, or `binary`.
+- `type` : `string` (default), `dword`, `qword`, or `binary`.
 
 ---
 
@@ -109,16 +106,19 @@ registry:
 ## Troubleshooting
 
 **Issue: Registry key not found**
+
 - Check if path is correct
 - Open Registry Editor (`regedit`) to verify
 - Make sure path uses correct hive (HKCU/HKLM)
 
 **Issue: Access denied**
+
 - Run WinHome as Administrator
 - Some HKLM keys require system privileges
 - Check key permissions in Registry Editor
 
 **Issue: Wrong value type**
+
 - Use `dword` for numbers (0, 1)
 - Use `string` for text values
 - Use `qword` for large numbers
